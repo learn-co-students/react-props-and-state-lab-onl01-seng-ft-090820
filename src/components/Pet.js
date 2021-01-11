@@ -2,18 +2,14 @@ import React from 'react'
 
 class Pet extends React.Component {
 
-  constructor() {
-    super()
-
-  }
   render() {
     return (
       <div className="card">
         <div className="content">
-          <a className="header">
+          <div className="header">
             {this.props.pet.gender === 'female' ? '♀ ' : '♂ '}
             {this.props.pet.name}
-          </a>
+          </div>
           <div className="meta">
             <span className="date">{this.props.pet.type}</span>
           </div>
