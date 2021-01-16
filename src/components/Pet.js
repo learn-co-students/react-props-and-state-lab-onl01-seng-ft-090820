@@ -4,7 +4,7 @@ class Pet extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card" key="{this.props.index}">
         <div className="content">
           <div className="header">
             {this.props.pet.gender === 'female' ? '♀ ' : '♂ '}
