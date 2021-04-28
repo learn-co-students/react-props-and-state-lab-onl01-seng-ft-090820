@@ -33,15 +33,13 @@ class App extends React.Component {
       .then(pets => this.setState({pets: pets}))
   }
 
-  // id is received from key, click in Pet.js
-  onAdoptPet = (id) => {
-    const all= this.state.pets.map(pet => {
-      return pet.id === id ? {
-        pet, 
-        isAdopted: true}:pet;
-    });
-    this.setState({pets: all})
-  }
+    // id is received from key, click in Pet.js
+    onAdoptPet = event => {
+      const adoptedPet = this.state.pets.find(pet => pet.id == event)
+      adoptedPet.isAdopted = true
+      const all= this.state.pets
+      this.setState({pets: all})
+    }
   
 
   render() {
